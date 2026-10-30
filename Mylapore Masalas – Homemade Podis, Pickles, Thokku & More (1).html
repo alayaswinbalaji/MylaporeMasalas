@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mylapore Masalas – Homemade Podis, Pickles, Thokku &amp; More</title>
+<meta name="description" content="Homemade podis, masala powders, pickles, thokku and special items from Mylapore Masalas. Fresh ingredients, no added preservatives or colours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=DM+Sans:wght@400;500;700&family=Mukta+Malar:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --leaf:#4a0f0a;
+  --leaf-deep:#330a07;
+  --turmeric:#ffc53d;
+  --kumkum:#b8281c;
+  --paper:#fff6e3;
+  --ink:#4a0f0a;
+  --muted:#7a5248;
+  --line:#ebd0b8;
+  --surface:#fffbf1;
+  --on-leaf:#fff6e3;
+  --display:"Bricolage Grotesque","Mukta Malar","Noto Sans Tamil",system-ui,sans-serif;
+  --body:"DM Sans","Mukta Malar","Noto Sans Tamil",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme: light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --leaf:#2e0a06;--leaf-deep:#220704;--turmeric:#ffc53d;--kumkum:#f0705f;
+    --paper:#190806;--ink:#fff0da;--muted:#c9a99c;--line:#4a2a22;--surface:#25100c;--on-leaf:#fff6e3;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --leaf:#2e0a06;--leaf-deep:#220704;--turmeric:#ffc53d;--kumkum:#f0705f;
+  --paper:#190806;--ink:#fff0da;--muted:#c9a99c;--line:#4a2a22;--surface:#25100c;--on-leaf:#fff6e3;
+  color-scheme: dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6}
+img,svg{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--turmeric);outline-offset:3px}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto}
+
+header.top{background:var(--leaf);color:var(--on-leaf)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+.brand{font-family:var(--display);font-weight:800;font-size:1.3rem;text-decoration:none;display:inline-flex;align-items:center;gap:10px}
+.brand .mark{width:42px;height:42px;flex:none}
+nav.links{display:flex;gap:22px;font-size:.98rem}
+nav.links a{text-decoration:none;opacity:.9}
+nav.links a:hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
+
+.hero{background:var(--leaf);color:var(--on-leaf);position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:32px;padding:56px 0 72px}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,6.4vw,4.9rem);line-height:1.02;margin:0 0 6px}
+.hero .tamil{font-family:var(--display);font-size:clamp(1.2rem,2.6vw,1.7rem);color:var(--turmeric);margin:0 0 14px}
+.tag{display:flex;align-items:center;gap:12px;margin:0 0 18px;font-weight:700;color:var(--on-leaf)}
+.tag::before{content:"";width:44px;height:2px;background:var(--turmeric)}
+.hero p.lead{max-width:30em;font-size:1.15rem;margin:0 0 28px;opacity:.95}
+.btn{display:inline-block;border:0;cursor:pointer;font:inherit;font-weight:700;text-decoration:none;padding:13px 24px;border-radius:999px;background:var(--turmeric);color:#4a0f0a}
+.btn:hover{filter:brightness(1.07)}
+.btn.ghost{background:transparent;color:inherit;border:2px solid currentColor;margin-left:10px}
+.kolam{width:100%;max-width:420px;justify-self:center;color:var(--turmeric)}
+.kolam .dot{fill:var(--on-leaf)}
+.kolam path{fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round}
+.kolam-fade{animation:draw 2.4s ease-out both}
+@keyframes draw{from{opacity:0;transform:scale(.94) rotate(-3deg)}to{opacity:1;transform:none}}
+.hero-edge{display:block;width:100%;height:28px;background:
+  radial-gradient(circle at 14px 0,var(--paper) 13px,transparent 14px) 0 0/28px 28px repeat-x;margin-top:-28px;position:relative}
+
+section{padding:64px 0}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.1;margin:0 0 10px}
+.sub{color:var(--muted);max-width:38em;margin:0 0 28px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tab{font:inherit;font-weight:500;cursor:pointer;padding:8px 18px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--ink)}
+.tab[aria-pressed="true"]{background:var(--leaf);border-color:var(--leaf);color:var(--on-leaf)}
+.tab:hover{border-color:var(--leaf)}
+.seg{font-family:var(--display);font-weight:800;font-size:1.35rem;margin:34px 0 6px}
+.seg:first-child{margin-top:8px}
+.seg-note{color:var(--muted);font-size:.95rem;margin:0 0 8px;max-width:44em}
+.items{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.item{display:grid;grid-template-columns:1fr auto auto;gap:8px 20px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+.item.ask{grid-template-columns:1fr auto}
+.item .nm{font-weight:700;font-size:1.1rem;line-height:1.3}
+.item .nm small{display:block;font-weight:400;color:var(--muted);font-size:.93rem;line-height:1.45}
+.item .nm small.local{margin-top:2px}
+.badge{display:inline-block;vertical-align:middle;margin-left:8px;font-size:.72rem;font-weight:700;padding:2px 9px;border-radius:999px;background:var(--turmeric);color:#4a0f0a;line-height:1.5}
+.badge.fav{background:var(--kumkum);color:#fff}
+.item select{font:inherit;padding:8px 10px;border-radius:8px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);min-width:160px}
+.item .add{font:inherit;font-weight:700;cursor:pointer;padding:9px 18px;border-radius:999px;border:2px solid var(--kumkum);color:var(--kumkum);background:transparent;text-decoration:none;display:inline-block;text-align:center}
+.item .add:hover,.item .add.done{background:var(--kumkum);color:#fff}
+.note{margin-top:26px;color:var(--muted);font-size:.95rem;max-width:46em}
+
+.about{background:var(--surface);border-block:1px solid var(--line)}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.facts{display:grid;gap:18px;align-content:start}
+.fact{padding-left:16px;border-left:4px solid var(--turmeric)}
+.fact strong{display:block}
+.fact span{color:var(--muted)}
+.sign{font-weight:700}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:8px}
+.steps h3{margin:0 0 4px;font-size:1.15rem}
+.steps p{margin:0;color:var(--muted)}
+
+.contact{background:var(--leaf);color:var(--on-leaf)}
+.contact .sub{color:inherit;opacity:.85}
+.contact dl{display:grid;grid-template-columns:max-content 1fr;gap:8px 24px;margin:0 0 24px}
+.contact dt{opacity:.75}
+.contact dd{margin:0}
+footer{padding:22px 0 110px;color:var(--muted);font-size:.9rem;text-align:center}
+
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--leaf-deep);color:var(--on-leaf);z-index:20;
+  padding:12px 20px calc(12px + env(safe-area-inset-bottom,0px));display:none;box-shadow:0 -6px 24px rgba(0,0,0,.25)}
+.bar.show{display:block}
+.bar .row{width:min(1080px,100%);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.bar button.link{background:none;border:0;color:inherit;font:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:4px;padding:6px 0}
+.bar .total{font-weight:700}
+.panel{width:min(1080px,100%);margin:10px auto 0;max-height:46vh;overflow:auto;border-top:1px solid rgba(255,255,255,.2);padding-top:10px;display:none}
+.panel.open{display:block}
+.line{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center;padding:7px 0}
+.line .q{display:flex;align-items:center;gap:8px}
+.line .q button{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--on-leaf);background:transparent;color:inherit;font:inherit;cursor:pointer;line-height:1}
+.line small{opacity:.75}
+.cust{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0 4px}
+.cust input{font:inherit;padding:9px 12px;border-radius:8px;border:0;background:#fff;color:#111;width:100%}
+
+@media (max-width:760px){
+  nav.links{display:none}
+  .hero .wrap{grid-template-columns:1fr;padding:36px 0 60px}
+  .kolam{max-width:280px;order:-1;justify-self:start}
+  .btn.ghost{margin-left:0;margin-top:10px}
+  .about .wrap{grid-template-columns:1fr;gap:28px}
+  .steps{grid-template-columns:1fr}
+  .item{grid-template-columns:1fr auto}
+  .item select{grid-column:1 / 2;min-width:0;width:100%}
+  .item .add{grid-column:2 / 3}
+  .cust{grid-template-columns:1fr}
+  section{padding:48px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .kolam-fade{animation:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="logo" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="#ffc53d"/><path d="M28 44 V79 H70 V44" fill="none" stroke="#4a0f0a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 57 L50 28 L79 57" fill="none" stroke="#4a0f0a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="44" cy="60" rx="12" ry="11" fill="#d62a1a"/><circle cx="41" cy="57" r="1.1" fill="#ffc53d"/><circle cx="46" cy="57" r="1.1" fill="#ffc53d"/><circle cx="40" cy="62" r="1.1" fill="#ffc53d"/><circle cx="44" cy="62" r="1.1" fill="#ffc53d"/><path d="M42 68 L84 32" stroke="#8b4a22" stroke-width="4.5" stroke-linecap="round"/><ellipse cx="48" cy="67" rx="11" ry="7" transform="rotate(-40 48 67)" fill="#8b4a22"/></symbol></svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><use href="#logo"/></svg><span>Mylapore Masalas</span></a>
+    <nav class="links" aria-label="Main">
+      <a href="#menu">Our products</a>
+      <a href="#about">About us</a>
+      <a href="#how">How to order</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <h1>Mylapore Masalas</h1>
+      <p class="tamil">மயிலாப்பூர் மசாலாஸ்</p>
+      <p class="tag">Spice it up with us</p>
+      <p class="lead">Homemade podis, masala powders, pickles and thokku, made fresh with no added preservatives or colours.</p>
+      <a class="btn" href="#menu">See what we make</a>
+      <a class="btn ghost" href="#how">How ordering works</a>
+    </div>
+    <svg class="kolam kolam-fade" id="kolam" viewBox="-235 -235 470 470" role="img" aria-label="Mylapore Masalas logo surrounded by a kolam pattern"></svg>
+  </div>
+</div>
+<span class="hero-edge" aria-hidden="true"></span>
+
+<section id="menu">
+  <div class="wrap">
+    <h2>What we make</h2>
+    <p class="sub">Choose a size, add it to your order, and send it to us on WhatsApp. Prices are in rupees (₹).</p>
+    <div class="tabs" role="group" aria-label="Filter products" id="tabs"></div>
+    <div id="list"></div>
+    <p class="note">All our products are made with fresh ingredients and have no added preservatives or colours. We use sunflower oil in some products only. Prices change with the market price of raw materials. Oil and red chilli prices have gone up recently, so some prices are higher than before.</p>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div>
+      <h2>A little about us</h2>
+      <p>Hi, this is Geetha. I have perfected these recipes over 25 years. My vision is for everyone to be able to enjoy homemade, healthy goodness at good prices.</p>
+      <p>We buy our organic raw ingredients wholesale and make everything fresh. Call us to place an order or to know more.</p>
+      <p class="sign">Geetha, Mylapore Masalas</p>
+    </div>
+    <div class="facts">
+      <div class="fact"><strong>Fresh ingredients</strong><span>Every product is made fresh, with organic raw ingredients bought wholesale.</span></div>
+      <div class="fact"><strong>No added preservatives or colours</strong><span>Just the ingredients listed with each product.</span></div>
+      <div class="fact"><strong>Sunflower oil, only where needed</strong><span>Oil is used in some products only.</span></div>
+      <div class="fact"><strong>Special items on order</strong><span>Batters, rasam, kozhambu, thuvayal and vadagam are made on request. Please order in advance.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2>How to order</h2>
+    <div class="steps">
+      <div><h3>1. Choose your items</h3><p>Add products from the list above and pick the size you want, up to 1 kg.</p></div>
+      <div><h3>2. Send on WhatsApp</h3><p>Tap “Send order on WhatsApp”. Your list is written for you. Add your name and address.</p></div>
+      <div><h3>3. We confirm</h3><p>We reply to confirm the final amount and delivery. For special items, please order in advance.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Contact us</h2>
+    <p class="sub">Call or message us to place an order or to know more. Follow us on Instagram for regular updates.</p>
+    <dl>
+      <dt>WhatsApp and phone</dt><dd><a href="tel:+919488604508">+91 94886 04508</a></dd>
+      <dt>Instagram</dt><dd><a href="https://instagram.com/mylapore.masalas" rel="noopener">@mylapore.masalas</a></dd>
+      <dt>Location</dt><dd>Mylapore, Chennai</dd>
+    </dl>
+    <a class="btn" id="waContact" href="#" rel="noopener">Chat on WhatsApp</a>
+  </div>
+</section>
+
+<footer>© <span id="yr"></span> Mylapore Masalas</footer>
+
+<div class="bar" id="bar" aria-live="polite">
+  <div class="row">
+    <div><span class="total" id="sum"></span> <button class="link" id="toggle" aria-expanded="false" aria-controls="panel">View order</button></div>
+    <a class="btn" id="send" href="#" rel="noopener">Send order on WhatsApp</a>
+  </div>
+  <div class="panel" id="panel">
+    <div id="lines"></div>
+    <div class="cust">
+      <input id="cname" type="text" placeholder="Your name" autocomplete="name" aria-label="Your name">
+      <input id="caddr" type="text" placeholder="Delivery area or address" autocomplete="street-address" aria-label="Delivery area or address">
+    </div>
+    <button class="link" id="clear">Clear order</button>
+  </div>
+</div>
+
+<script>
+var WHATSAPP = "919488604508";
+
+var CATEGORIES = [
+  {id:"podi",    name:"Podis and masala powders", note:"The highlighted ingredients are what you will taste most in each podi."},
+  {id:"pickle",  name:"Pickles (Urugai)", note:""},
+  {id:"paste",   name:"Pastes (Thokku)", note:""},
+  {id:"legiyam", name:"Legiyam", note:""},
+  {id:"special", name:"Special items (order in advance)", note:"Made on request. Please order in advance. Call or message us for prices."}
+];
+
+/* Prices are for the pack size given; other sizes are priced in proportion. */
+var STD = [250,500,1000];
+var FULL = [100,150,250,500,1000];
+function sizes(base, price, ws){
+  return ws.map(function(w){
+    return [w===1000 ? "1 kg" : w+" g", w===base ? price : Math.round(price*w/base/5)*5];
+  });
+}
+function P(c, n, t, use, ing, base, price, ws, tag, extra){
+  return {c:c, n:n, t:t, use:use, ing:ing, o:sizes(base,price,ws), tag:tag||"", extra:extra||""};
+}
+function Q(c, n, t, extra, tag){ return {c:c, n:n, t:t, use:"", ing:"", o:null, tag:tag||"", extra:extra||""}; }
+
+var EP = "Eat with idly or dosai, or mix with rice and sesame oil";
+var PRODUCTS = [
+  P("podi","Sambar Powder","Sambar Podi","To make sambar","Toor dal, fenugreek",250,180,STD),
+  P("podi","Rasam Powder","Rasam Podi","To make rasam","Jeera, dhaniya, pepper",250,180,STD,"Customer\u2019s favourite"),
+  P("podi","Lentil Idly/Rice Powder","Paruppu Podi",EP,"Asafoetida, toor dal",250,180,STD),
+  P("podi","Garlic Lentil Powder","Poondu Podi",EP,"Garlic, toor dal",250,180,STD),
+  P("podi","Curry Leaves Powder","Karuveppillai Podi","Mix with rice","Asafoetida, curry leaves",250,180,STD,"Best seller"),
+  P("podi","Biriyani Masala","Biriyani Masala","To make biriyani","Bay leaf, star anise, cinnamon",100,170,FULL),
+  P("podi","Bisibelabath Masala","Bisibelabath Masala","To make bisibelabath","Coconut, toor dal, red chilli",100,100,FULL,"Customer\u2019s favourite"),
+  P("podi","Sesame Idly Powder","Ellu Podi",EP,"Black sesame, red chilli",250,180,STD),
+  P("podi","Idly/Gun Powder","Idly Milagai Podi","Eat with idly or dosai","Urad dal, bengal gram, red chilli",250,180,STD,"Best seller"),
+  P("podi","Cilantro/Coriander Powder","Kothamalli Podi","Eat with idly or dosai, or mix with rice","Coriander leaves, red chilli, asafoetida",250,180,STD,"New"),
+  P("podi","Coriander Seeds Powder","Dhaniya Podi",EP,"Coriander seeds, red chilli",250,180,STD,"New"),
+  P("podi","Special Porridge Mix","Special Kanji Mavu","Make porridge with milk (sweet) or curd (salty)","Almond, cashew and various millets",250,200,STD,"","Optional: with cardamom"),
+  P("podi","Multi Grain Healthy Porridge Mix","Multi Grain Healthy Kanji Mavu","Make porridge with milk (sweet) or curd (salty)","18 grains including millet, ragi and wheat",250,150,STD,"Customer\u2019s favourite","Optional: with cardamom"),
+
+  P("pickle","Cut Mango","Avakkai","Pickle","Raw mango, homemade red chilli powder",250,225,STD,"","Available with and without garlic"),
+  P("pickle","Tamarind-Ginger","Puli Inji","Pickle","Tamarind, ginger, jaggery",250,180,STD,"New"),
+  P("pickle","Amla","Nellikai","Pickle","Amla, chilli powder, turmeric powder",250,180,STD,"Best seller"),
+  P("pickle","Lemon","Lemon","Pickle","Fresh lemon, homemade red chilli powder",250,180,STD),
+  P("pickle","Wild Lemon","Kadarangai","Pickle","Locally sourced wild lemon, homemade red chilli powder",250,180,STD,"Best seller"),
+  P("pickle","Citron","Narthangai","Pickle","Locally sourced citron, homemade red chilli powder",250,180,STD),
+
+  P("paste","Tamarind Rice Mix","Pulikaichal","Goes with idly, dosa and roti. Mix with rice for puliyotharai","Tamarind, sesame oil, peanuts, dal variety, red chillies, curry leaves",250,225,STD,"Best seller"),
+  P("paste","Veldt Grape Rice Paste","Pirandai Thuvayal","Goes with idly, dosa and roti. Mix with rice","Veldt grape, curry leaves",250,180,STD),
+  P("paste","Grated Mango Pickle","Manga Thokku","Goes with idly, dosa and roti. Eat like a pickle","Raw mango, homemade red chilli powder",250,180,STD,"Seasonal"),
+  P("paste","Tomato Pickle","Thakkali Thokku","Goes with idly, dosa and roti. Eat like a pickle. Goes well with mixed rice and curd rice","Tomatoes, homemade red chilli powder",250,180,STD,"Seasonal","Price depends on the market price of tomatoes"),
+  P("paste","Sour Spinach Pickle","Gongura Thokku","Eat like a pickle or mix with rice. Goes well with mixed rice and curd rice","Sour spinach, garlic, homemade red chilli powder",250,180,STD),
+  P("paste","Cilantro/Coriander Pickle","Kothamalli Thokku","Goes with idly, dosa and roti. Goes well with mixed rice and curd rice","Cilantro, green chilli",250,180,STD),
+
+  P("legiyam","Diwali/Prasava Legiyam","","","",100,140,FULL),
+
+  Q("special","Mudakathan Dosa Batter","Mudakathan dosa batter","","Seasonal"),
+  Q("special","Adai Batter","Adai batter","Comes with a separate sachet of onions and curry leaves to add"),
+  Q("special","Tomato Dosa Batter","Tomato dosa batter"),
+  Q("special","Idly Batter","Idly batter","Composition made specially for idly"),
+  Q("special","Veppampoo Rasam","Veppampoo rasam"),
+  Q("special","Milagu Kozhambu","Milagu kozhambu"),
+  Q("special","Poondu Thuvayal","Poondu thuvayal")
+];
+
+var cart = {};
+var active = "all";
+function $(id){return document.getElementById(id)}
+function rupee(n){return "₹" + n}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+
+/* Kolam with logo */
+(function(){
+  var svg = $("kolam"), N = 5, S = 44, out = "";
+  function inside(x,y){return Math.abs(x)+Math.abs(y) <= N}
+  for(var y=-N;y<=N;y++){for(var x=-N;x<=N;x++){
+    if(inside(x,y) && (x+y+N)%2===0){out += '<circle class="dot" cx="'+x*S+'" cy="'+y*S+'" r="3.2"/>';}
+  }}
+  var d = "";
+  for(var y2=-N;y2<N;y2++){for(var x2=-N;x2<N;x2++){
+    var cx = x2+.5, cy = y2+.5;
+    if(Math.abs(cx)+Math.abs(cy) <= N-0.5 && (x2+y2+N)%2!==0){
+      var r = .5*S, X=cx*S, Y=cy*S;
+      d += 'M'+(X-r)+' '+Y+' Q'+X+' '+(Y-r*1.15)+' '+(X+r)+' '+Y+' Q'+X+' '+(Y+r*1.15)+' '+(X-r)+' '+Y+' Z ';
+    }
+  }}
+  svg.innerHTML = '<path d="'+d+'"/>' + out + '<circle r="112" style="fill:var(--leaf)"/><use href="#logo" x="-100" y="-100" width="200" height="200"/>';
+})();
+
+function renderTabs(){
+  var h = '<button class="tab" aria-pressed="'+(active==="all")+'" data-c="all">All</button>';
+  CATEGORIES.forEach(function(c){h += '<button class="tab" aria-pressed="'+(active===c.id)+'" data-c="'+c.id+'">'+esc(c.name)+'</button>'});
+  $("tabs").innerHTML = h;
+}
+$("tabs").addEventListener("click", function(e){
+  var b = e.target.closest(".tab"); if(!b) return;
+  active = b.getAttribute("data-c"); renderTabs(); renderList();
+});
+
+function badge(tag){
+  if(!tag) return "";
+  var cls = /favou?rite/i.test(tag) ? "badge fav" : "badge";
+  return '<span class="'+cls+'">'+esc(tag)+'</span>';
+}
+function askLink(p){
+  var m = "Hello Mylapore Masalas, please share the price and availability for " + p.n + ".";
+  return "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(m);
+}
+function renderList(){
+  var h = "";
+  CATEGORIES.forEach(function(c){
+    if(active!=="all" && active!==c.id) return;
+    var rows = "";
+    PRODUCTS.forEach(function(p,i){
+      if(p.c!==c.id) return;
+      var meta = "";
+      if(p.t && p.t!==p.n) meta += '<small>'+esc(p.t)+'</small>';
+      if(p.use) meta += '<small class="local">'+esc(p.use)+'</small>';
+      if(p.ing) meta += '<small>Key ingredients: '+esc(p.ing)+'</small>';
+      if(p.extra) meta += '<small>'+esc(p.extra)+'</small>';
+      if(p.o){
+        var opts = p.o.map(function(o,j){return '<option value="'+j+'">'+o[0]+' – '+rupee(o[1])+'</option>'}).join("");
+        rows += '<li class="item"><div class="nm">'+esc(p.n)+badge(p.tag)+meta+'</div>'+
+          '<select aria-label="Size for '+esc(p.n)+'" id="sel'+i+'">'+opts+'</select>'+
+          '<button class="add" data-i="'+i+'">Add</button></li>';
+      } else {
+        rows += '<li class="item ask"><div class="nm">'+esc(p.n)+badge(p.tag)+meta+'</div>'+
+          '<a class="add" href="'+askLink(p)+'" rel="noopener">Ask price</a></li>';
+      }
+    });
+    h += '<h3 class="seg">'+esc(c.name)+'</h3>' + (c.note ? '<p class="seg-note">'+esc(c.note)+'</p>' : '') + '<ul class="items">'+rows+'</ul>';
+  });
+  $("list").innerHTML = h;
+}
+$("list").addEventListener("click", function(e){
+  var b = e.target.closest("button.add"); if(!b) return;
+  var i = b.getAttribute("data-i"), j = $("sel"+i).value, k = i+"|"+j;
+  cart[k] = (cart[k]||0)+1;
+  b.textContent = "Added ✓"; b.classList.add("done");
+  setTimeout(function(){b.textContent="Add"; b.classList.remove("done")}, 900);
+  renderCart();
+});
+
+function entries(){
+  return Object.keys(cart).filter(function(k){return cart[k]>0}).map(function(k){
+    var a = k.split("|"), p = PRODUCTS[+a[0]], o = p.o[+a[1]];
+    return {k:k, name:p.n, size:o[0], price:o[1], qty:cart[k]};
+  });
+}
+function renderCart(){
+  var es = entries(), n = 0, total = 0;
+  es.forEach(function(e){n += e.qty; total += e.qty*e.price});
+  $("bar").classList.toggle("show", n>0);
+  $("sum").textContent = n + (n===1?" item":" items") + " · " + rupee(total);
+  $("lines").innerHTML = es.map(function(e){
+    return '<div class="line"><div>'+esc(e.name)+' <small>'+e.size+'</small></div>'+
+      '<div class="q"><button data-k="'+e.k+'" data-d="-1" aria-label="Remove one '+esc(e.name)+'">−</button><span>'+e.qty+'</span><button data-k="'+e.k+'" data-d="1" aria-label="Add one '+esc(e.name)+'">+</button></div>'+
+      '<div>'+rupee(e.qty*e.price)+'</div></div>';
+  }).join("");
+  updateLink();
+}
+$("lines").addEventListener("click", function(e){
+  var b = e.target.closest("button"); if(!b) return;
+  var k = b.getAttribute("data-k"); cart[k] = Math.max(0,(cart[k]||0)+Number(b.getAttribute("data-d")));
+  renderCart();
+});
+$("clear").addEventListener("click", function(){cart={}; renderCart(); setPanel(false)});
+function setPanel(open){
+  $("panel").classList.toggle("open", open);
+  $("toggle").setAttribute("aria-expanded", open);
+  $("toggle").textContent = open ? "Hide order" : "View order";
+}
+$("toggle").addEventListener("click", function(){setPanel(!$("panel").classList.contains("open"))});
+
+function updateLink(){
+  var es = entries(), total = 0, msg = "Hello Mylapore Masalas, I would like to order:\n";
+  es.forEach(function(e){total += e.qty*e.price; msg += "• "+e.name+" ("+e.size+") x "+e.qty+" = "+rupee(e.qty*e.price)+"\n"});
+  msg += "\nTotal: "+rupee(total);
+  var nm = $("cname").value.trim(), ad = $("caddr").value.trim();
+  if(nm) msg += "\nName: "+nm;
+  if(ad) msg += "\nDelivery: "+ad;
+  $("send").href = "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(msg);
+}
+$("cname").addEventListener("input", updateLink);
+$("caddr").addEventListener("input", updateLink);
+$("waContact").href = "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent("Hello Mylapore Masalas, I have a question.");
+$("yr").textContent = new Date().getFullYear();
+
+renderTabs(); renderList(); renderCart();
+</script>
+</body>
+</html>
